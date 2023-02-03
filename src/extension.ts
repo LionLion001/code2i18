@@ -58,6 +58,9 @@ export function activate(context: vscode.ExtensionContext) {
       StringLiteral(path: any, state: any) {
         if (path.findParent((path: any) => path.isCallExpression())) {
           //如果父级是callexpression
+          if (generate(path.parent.callee).code === "window.t") {
+            return;
+          }
           let textVal = path.node.value;
           if (path.node.isNew || textVal.trim() === "" || !isChinese(textVal)) {
             return;

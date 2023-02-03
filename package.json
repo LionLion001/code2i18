@@ -6,6 +6,10 @@
   "engines": {
     "vscode": "^1.74.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XiaoXuan001/code2i18.git"
+  },
   "categories": [
     "Other"
   ],
@@ -17,7 +21,7 @@
     "commands": [
       {
         "command": "code2i18.helloWorld",
-        "title": "搞笑"
+        "title": "国际化"
       }
     ]
   },
